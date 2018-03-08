@@ -25,6 +25,7 @@ if (isset($_POST['submit'])) {
         
         echo 'Вы зарегистрированны!';
         exit();
+          <a href="\perevod.php">Регистрация</a>
       }
       else {
         echo 'Такой пользователь уже существует!';
