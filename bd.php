@@ -1,12 +1,8 @@
 <?php
 
-$dsn = 'mysql:host=localhost;dbname=deneg';
-$username = 'den';
-$password = Rosbank20;
-
 try {
-  $conn = new PDO($dsn, $username, $password);
-  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  $conn = new PDO("sqlsrv:server = tcp:deneg.database.windows.net,1433; Database = asus", "den", "Rosbank20");
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 }
 catch (PDOException $e) {
   print("Ошибка подключения к SQL Server.");
