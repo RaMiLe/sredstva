@@ -70,14 +70,14 @@ if (isset($_POST['submit'])) {
 
     <div class="content">
 		<input name="username" type="text" class="input username" value="Логин" onfocus="this.value=''" />
-		<input name="password_1" type="password" class="input password" value="Пароль" onfocus="this.value=''" />
-	    <input name="password_2" type="password" class="input password" value="Подвердите пароль" onfocus="this.value=''" />
-	    <input name="email" type="text" class="input password" value="email" onfocus="this.value=''" />
+		<input name="password-1" type="password" class="input password" value="Пароль" onfocus="this.value=''" />
+	    <input name="password-2" type="password" class="input password" value="Подвердите пароль" onfocus="this.value=''" />
+	    <input name="email" type="text" class="input email" value="email" onfocus="this.value=''" />
     </div>
 
     <div class="footer">
 		
-		<input type="submit" name="submit" value="Регистрация" class="register" />
+		<input class="submit" name="submit" value="Регистрация" class="register" />
     </div>
 
 </form>
