@@ -68,16 +68,13 @@ if (isset($_POST['submit'])) {
 		<span>Введите ваши регистрационные данные для входа в ваш личный кабинет. </span>
     </div>
 
-    <div class="content">
-		<input name="username" type="text" class="input username" value="Придумайте логин" onfocus="this.value=''" />
-		<input name="password" type="password" class="input password" value="Придумайте пароль пароль" onfocus="this.value=''" />
-        <input name="password2" type="password" class="input password2" value="Подвердите пароль" onfocus="this.value=''" />
-        <input name="email" type="text" class="input email" value="Введите почту" onfocus="this.value=''" />
-    </div>
-
-    <div class="footer">
-		<input type="submit" name="submit" value="ВОЙТИ" class="button" />
-		<a href="sugnup.php">Регистрация</a>
+    <div class="dws-input">
+          <input type="text" name="username" placeholder="Придумайте логин">
+          <input type="password" name="password-1" placeholder="Придумайте пароль">
+          <input type="password" name="password-2" placeholder="Введите пароль еще раз">
+          <input type="text" name="email" placeholder="Ваш email...">
+        </div>
+        <input class="dws-submit" type="submit" name="submit" value="Регистрация">
     </div>
 
 </form>
