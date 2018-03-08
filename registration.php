@@ -1,4 +1,37 @@
+<?php
 
+require_once('db.php');
+
+if (isset($_POST['submit'])) {
+
+    $username = $_POST['username'];
+    $password_1 = $_POST['password-1'];
+    $password_2 = $_POST['password-2'];
+    $email = $_POST['email'];
+
+    if (!empty($username) && !empty($password_1) && !empty($password_2) && ($password_1 == $password_2)) {
+      $sql_select = "SELECT * FROM signup WHERE username = '$username'";
+      $stmt = $conn->query($sql_select);
+      $stmt->execute();
+      $data = $stmt->fetchAll();
+
+      if(count($data) == 0) {
+        $sql_insert = "INSERT INTO signup (username, password, email) VALUES (?,?,?)";
+        $stmt = $conn->prepare($sql_insert);
+        $stmt->bindValue(1, $username);
+        $stmt->bindValue(2, $password_1);
+        $stmt->bindValue(3, $email);
+        $stmt->execute();
+        
+        echo 'Вы зарегистрированны!';
+        exit();
+      }
+      else {
+        echo 'Такой пользователь уже существует!';
+      }
+    }
+  }
+?>
 
 <!DOCTYPE html>
 <html>
@@ -23,3 +56,4 @@
     </div>
   </body>
 </html>
+
