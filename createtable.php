@@ -5,9 +5,12 @@ try {
 $sql = "CREATE TABLE users(
 id INT NOT NULL IDENTITY(1,1),
 PRIMARY KEY(id),
-name VARCHAR(30),
+login VARCHAR( 20 ),
+password VARCHAR( 35 ),
+reg_date VARCHAR( 32 )
+name_user VARCHAR( 32 ),
 email VARCHAR(30),
-country VARCHAR(30),
+lastname VARCHAR( 32 ),
 date DATE)";
 $conn->query($sql);
 
