@@ -77,7 +77,7 @@ if (isset($_POST['submit'])) {
 
     <div class="footer">
 		
-		<input class="dws-submit" type="submit" name="submit" value="Регистрация" class="register" />
+		<input class="dws-submit" type="submit" name="submit" value="Регистрация">
     </div>
 
 </form>
