@@ -25,7 +25,7 @@ if (isset($_POST['submit'])) {
         
         echo 'Вы зарегистрированны!';
         exit();
-          <a href="\perevod.php">Регистрация</a>
+          
       }
       else {
         echo 'Такой пользователь уже существует!';
@@ -52,7 +52,7 @@ if (isset($_POST['submit'])) {
           <input type="password" name="password-2" placeholder="Введите пароль еще раз">
           <input type="text" name="email" placeholder="Ваш email...">
         </div>
-        <input class="dws-submit" type="submit" name="submit" value="Регистрация">
+        <a href="\perevod.php">Регистрация</a>
       </form>
     </div>
   </body>
