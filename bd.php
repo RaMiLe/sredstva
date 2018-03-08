@@ -1,9 +1,8 @@
 <?php
 session_start();
 
-mysql_connect ("asus","den","Rosbank20");
-mysql_select_db ("deneg");
-mysql_query("SET NAMES utf8");
+ $conn = new PDO("sqlsrv:server = tcp:deneg.database.windows.net,1433; Database = asus", "den", "Rosbank20");
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 $login = $_SESSION['login'];
 $password = $_SESSION['password'];
