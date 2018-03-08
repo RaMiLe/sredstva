@@ -70,11 +70,14 @@ if (isset($_POST['submit'])) {
 
       <a href="/index.php"><img src="img/lock.png"></a>
       <form class="" action="sugnup.php" method="post">
+	      <div class="content">
+
         <div class="dws-input">
           <input type="text" name="username" placeholder="Придумайте логин"onfocus="this.value=''" />
           <input type="password" name="password-1" placeholder="Придумайте пароль">
           <input type="password" name="password-2" placeholder="Введите пароль еще раз">
           <input type="text" name="email" placeholder="Ваш email...">
+		</div>
         </div>
         <input class="dws-submit" type="submit" name="submit" value="Регистрация">
       </form>
