@@ -1,6 +1,6 @@
 <?php
 
-require_once('db.php');
+require_once('bd.php');
 
 if (isset($_POST['submit'])) {
 
