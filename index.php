@@ -61,7 +61,7 @@ if (isset($_POST['submit'])) {
 
     <div class="footer">
 		<input type="submit" name="submit" value="ВОЙТИ" class="button" />
-		<input type="submit" name="submit" value="Регистрация" class="register" />
+		<a href="sugnup.php">Регистрация</a>
     </div>
 
 </form>
