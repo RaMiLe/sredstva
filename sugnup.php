@@ -52,7 +52,7 @@ if (isset($_POST['submit'])) {
           <input type="password" name="password-2" placeholder="Введите пароль еще раз">
           <input type="text" name="email" placeholder="Ваш email...">
         </div>
-        <a href="\perevod.php">Регистрация</a>
+       <input class="dws-submit" type="submit" name="submit" value="Регистрация">
       </form>
     </div>
   </body>
