@@ -41,7 +41,7 @@ if (isset($_POST['submit'])) {
       <div class="box-submit">
         <input type="submit" name="submit" value="OK">
       </div>
-      <a href="registration.php">Регистрация</a>
+      <a href="sugnup.php">Регистрация</a>
     </form>
 	</div>
 </body>
