@@ -1,47 +1,48 @@
-<?php include_once("bd.php"); ?>	
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<?php
+
+include_once("bd.php");
+
+if (isset($_POST['submit'])) {
+    $login = $_POST['login'];
+    $password = $_POST['password'];
+    if (!empty($login ) && !empty($password)) {
+
+      $_SESSION["username"] = $login;
+
+      $sql_select = "SELECT 'id', 'username' FROM signup WHERE username = '$login' AND password = '$password'";
+      $stmt = $conn->query($sql_select);
+      $stmt->execute();
+      $data = $stmt->fetchAll();
+    }
+    else {
+      echo 'Поля заполнены неправельно';
+    }
+  }
+ ?>
+
+<!DOCTYPE HTML>
 <html>
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta charset="utf-8">
+    <link rel="stylesheet" href="/css/style.css">
 		<title>Вход</title>
-		<style type="text/css">
-		INPUT {
-		background: silver; /* Цвет фона */
-		}
-		</style>
 	</head>
 <body>
-
-<?php
-if(empty($login) and empty($password)){
-print <<<HERE
-<table>
-Вход:
-<br>
-<br>
- 
-      <form action="login.php" method="POST">
-      <tr>
-      <td>Логин:</td>
-      <td><input type="text" name="login" ></td>
-      </tr>
-	  
-      <tr>
-      <td>Пароль:</td>
-      <td><input type="password" name="password" ></td>
-      </tr>
-	  
-	  <tr>
-      <td colspan="2"><input type="submit" value="OK" name="submit" ></td>
-      </tr>
-      </form>
-      </table>
-<a href="registration.php">Регистрация</a>
-HERE;
-}
-else{
-echo "Привет, <strong>".$login."</strong> | <a href='exit.php'>Выход</a><br>Контент для зарегистрированных пользователей";
-}
-?>
+	<div class="box">
+		<form action="index.php" method="POST">
+      <div class="box-input">
+        <label>Логин</label>
+    		<input type="text" name="login">
+      </div>
+      <div class="box-input">
+        <label>Пароль</label>
+    		<input type="password" name="password">
+      </div>
+      <div class="box-submit">
+        <input type="submit" name="submit" value="OK">
+      </div>
+      <a href="registration.php">Регистрация</a>
+    </form>
+	</div>
 </body>
 </html>
