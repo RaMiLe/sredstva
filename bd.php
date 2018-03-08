@@ -1,14 +1,11 @@
 <?php
-require_once('rb.php');
-$dsn = 'mysql:host=deneg;dbname=asus';
-$login = 'den';
-$pass = Rosbank20;
-try {
-  R::setup($dsn, $login, $pass);
-}
-catch (Exception $ex) {
-  echo 'Не связанный '.$ex->getMessage();
-}
-
 session_start();
- ?>
+
+mysql_connect ("deneg","asus","Rosbank20");
+mysql_select_db ("den");
+mysql_query("SET NAMES utf8");
+
+$login = $_SESSION['login'];
+$password = $_SESSION['password'];
+$id_user = $_SESSION['id'];
+?>>
