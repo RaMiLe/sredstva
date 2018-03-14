@@ -71,7 +71,7 @@ if (isset($_POST['submit'])) {
     <div class="content">
 	     <input name="middkename" type="text" class="input middkename" value="Ваше отчество" onfocus="this.value=''" />
 	    <input name="lastname" type="text" class="input lastname" value="Ваше имя" onfocus="this.value=''" />
-	    <input name="name" type="text" class="input name" value="Имя" onfocus="this.value=''" />
+	    <input name="name" type="text" class="input name" value="Ваше фамиля" onfocus="this.value=''" />
 		<input name="username" type="text" class="input username" value="Логин" onfocus="this.value=''" />
 		<input name="password-1" type="password" class="input password" value="Пароль" onfocus="this.value=''" />
 	    <input name="password-2" type="password" class="input password" value="Подвердите пароль" onfocus="this.value=''" />
