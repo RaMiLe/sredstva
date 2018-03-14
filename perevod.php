@@ -39,9 +39,13 @@
 	    <input name="lastname" type="text" class="input lastname" value=" имя и фамилия  получателя" onfocus="this.value=''" />
 	    <input name=noumber" type="text" class="input noumber" value="+7 9XX-XXX-XX-XX" onfocus="this.value=''" />
 		<input name="amount for transfer" type="text" class="input transfer" value="Сумма для перевода" onfocus="this.value=''" />
-		<input name="password-1" type="password" class="input password" value="Пароль" onfocus="this.value=''" />
-	    <input name="password-2" type="password" class="input password" value="Подвердите пароль" onfocus="this.value=''" />
-	    <input name="email" type="text" class="input email" value="email" onfocus="this.value=''" />
+		<select name="country">
+<option value="">Валюта</option>
+<option value="Russia">Рубаль</option>
+<option value="USA">Доллар</option>
+<option value="Germany">Euro</option>
+
+</select>
     </div>
 
     <div class="footer">
