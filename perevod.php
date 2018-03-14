@@ -1,4 +1,5 @@
 <html>
+	<Title>Ваши данные</Title>	
 <head>
 <title>Background-image</title>
 </head>
