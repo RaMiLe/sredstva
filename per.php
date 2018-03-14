@@ -1,5 +1,6 @@
 <html>
-	<Title>Номер карты</Title>	
+	<Title>Номер карты</Title>
+	
 <head>
 <title>Background-image</title>
 </head>
