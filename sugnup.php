@@ -11,3 +11,4 @@
 		<input name="name" type="text" class="input name" value="Введите фамилию" onfocus="this.value=''" />
 			
 <input name="patronymic" type="text" class="patronymic" value="Введите отчество" onfocus="this.value=''" />
+		 <input name=noumber" type="text" class="input noumber" value="+7 9XX-XXX-XX-XX" onfocus="this.value=''" />
