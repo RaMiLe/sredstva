@@ -9,8 +9,6 @@
 	
 </head>
 	
-<body><body background="https://yandex.ru/images/search?text=%D0%B4%D0%B5%D0%BD%D1%8C%D0%B3%D0%B8&img_url=https%3A%2F%2Flook.com.ua%2Fpic%2F201306%2F1600x1200%2Flook.com.ua-70589.jpg&pos=1&rpt=simage">
-</body>
 
 	
 
