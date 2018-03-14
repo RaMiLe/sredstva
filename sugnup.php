@@ -1,4 +1,5 @@
 <html>
+	<Title>Данные получателя</Title>	
 <head>
 <title>Background-image</title>
 </head>
