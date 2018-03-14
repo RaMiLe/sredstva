@@ -34,9 +34,9 @@
 
     <div class="content">
 		<input name="pasport" type="text" class="input pasport" value="Введите серию и номер пампорта" onfocus="this.value=''" />
-		<input name="receiver name" type="text" class="input receiver name" value="Введите фамилию и имя получателя onfocus="this.value=''" />
-		<input name="phone number" type="text" class="input phone number" value=" пример ввода +7-927-999-99-99 onfocus="this.value=''" />
-	    <input name="transfer amout" type="text" class="input transfer amout" value=" введите сумму onfocus="this.value=''" />
+		<input name="receiver name" type="text" class="input receiver name" value="Введите фамилию и имя получателя" onfocus="this.value=''" />
+		<input name="phone number" type="text" class="input phone number" value=" пример ввода +7-927-999-99-99" onfocus="this.value=''" />
+	    <input name="transfer amout" type="text" class="input transfer amout" value=" введите сумму" onfocus="this.value=''" />
 	    
 	    <select name="currency">
 <option value="">ruble</option>
