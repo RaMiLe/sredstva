@@ -8,7 +8,9 @@
 	<link rel="shortcut icon" href="http://vladmaxi.net/favicon.ico" type="image/x-icon">
 	
 </head>
-	
+	<body background="https://ic.pics.livejournal.com/irek_murtazin/10510480/1151738/1151738_600.jpg">
+</body>
+
 
 	
 
