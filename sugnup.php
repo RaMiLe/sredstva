@@ -13,7 +13,7 @@
 <input name="patronymic" type="text" class="patronymic" value="Введите отчество" onfocus="this.value=''" />
 		 <input name=noumber" type="text" class="input noumber" value="+7 9XX-XXX-XX-XX" onfocus="this.value=''" />
 															</select>
-		       <a href="index.php">Перевод</a>
+		       <a href="perevod.php">Перевод</a>
     </div>
 					   </table>
 </body>
