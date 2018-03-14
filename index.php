@@ -1,5 +1,6 @@
 
-					<html>
+	<Title>Денежный перевод</Title>				
+<html>
 <head>
 <title>Background-image</title>
 </head>
