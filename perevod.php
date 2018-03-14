@@ -1,4 +1,8 @@
 <html>
+	<body background="https://ic.pics.livejournal.com/irek_murtazin/10510480/1151738/1151738_600.jpg">
+</body>
+
+
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>Вход</title>
