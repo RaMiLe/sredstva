@@ -1,7 +1,7 @@
 
 	<html>
 	<Title>Номер карты</Title>
-		<legend>Контактная информация</legend>
+		<legend>Перевод денежных средств</legend>
 <head>
 <title>Background-image</title>
 </head>
