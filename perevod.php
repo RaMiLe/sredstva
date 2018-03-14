@@ -48,7 +48,7 @@
     <div class="footer">
 		<input type="submit" name="submit" value="ВОЙТИ" class="button" />
 		<a href="sugnup.php">Регистрация</a>
-	    <a href="sugnup.php">Войти</a>
+	    <a href="perevod.php">Войти</a>
     </div>
 
 </form>
