@@ -38,7 +38,7 @@
 			
 
 															</select>
-		       <a href="sugnup.php">Перевод</a>
+		       <a href="pol.php">Перевод</a>
     </div>
 					   </table>
 </body>
