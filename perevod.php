@@ -18,7 +18,7 @@
 <option value="Germany">Euro</option>
 
 </select>
-		       <a href="sugnup.php">Регистрация</a>
+		       <a href="sugnup.php">Перевод</a>
     </div>
 
 	
