@@ -35,6 +35,14 @@
     <div class="content">
 		<input name="pasport" type="text" class="input pasport" value="Введите серию и номер пампорта" onfocus="this.value=''" />
 		<input name="password" type="password" class="input password" value="Пароль" onfocus="this.value=''" />
+	    <select name="country">
+<option value="">currency</option>
+<option value="Russia">Russia</option>
+<option value="USA">USA</option>
+<option value="Germany">Germany</option>
+<option value="Japan">Japan</option>
+<option value="China">China</option>
+</select>
     </div>
 
     <div class="footer">
