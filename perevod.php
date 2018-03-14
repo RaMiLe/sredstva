@@ -1,5 +1,6 @@
 <html>
-	<Title>Ваши данные</Title>	
+	<Title> данные отправителя</Title>
+	<legend>Данные отправителя</legend>
 <head>
 <title>Background-image</title>
 </head>
