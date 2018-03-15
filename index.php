@@ -26,9 +26,10 @@
 <option value="">Валюта</option>
 <option value="Russia">Рубаль</option>
 <option value="USA">Доллар</option>
-<option value="Germany">Euro</option>
+<option value="Europa">Euro</option>
 
 </select>
+	<input type="button" value="Регистрация" name="buttonreg" onClick="but1()" />
 		       <a href="sugnup.php">Перевод</a>
     </div>
 
