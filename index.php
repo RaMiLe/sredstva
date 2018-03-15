@@ -30,11 +30,11 @@
 
 </select>
 	<input type="button" value="Далее" name="buttonreg" onClick="but1()" />
-		       <a href="sugnup.php">Перевод</a>
+		       
 	<script>
 function but1()
 {
-     window.location = "perevod.php"
+     window.location = "sugnup.php"
 }
 </script>
     </div>
