@@ -38,7 +38,14 @@
 			
 
 															</select>
-		       <a href="pol.php">Перевод</a>
+		      <input type="button" value="Далее" name="buttonreg" onClick="but1()" />
+		       
+	<script>
+function but1()
+{
+     window.location = "pol.php"
+}
+</script>		
     </div>
 					   </table>
 </body>
