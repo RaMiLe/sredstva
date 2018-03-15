@@ -13,7 +13,14 @@
 		
 
 															</select>
-		       <a href="sugnup.php">Перевод</a>
+		       <input type="button" value="Перевести деньги" name="buttonreg" onClick="but1()" />
+		       
+	<script>
+function but1()
+{
+     window.location = "per.php"
+}
+</script>		
     </div>
 					   </table>
 </body>
