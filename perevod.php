@@ -15,7 +15,15 @@
 <input name="patronymic" type="text" class="patronymic" value="Введите отчество" onfocus="this.value=''" />
 		 <input name=noumber" type="text" class="input noumber" value="+7 9XX-XXX-XX-XX" onfocus="this.value=''" />
 															</select>
-		       <a href="per.php">Перевод</a>
+	<input type="button" value="Далее" name="buttonreg" onClick="but1()" />
+		       
+	<script>
+function but1()
+{
+     window.location = "per.php"
+}
+</script>														
+		       
     </div>
 					   </table>
 </body>
