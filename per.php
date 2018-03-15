@@ -27,11 +27,11 @@
 </select> 
 <select name="country">
 <option value="">Месяц</option>
-<option value="Russia">2018</option>
-<option value="USA">2019</option>
-<option value="Germany">2020</option>
-<option value="Japan">2021</option>
-<option value="China">2022</option>
+<option value="2018">2018</option>
+<option value="2019">2019</option>
+<option value="2020">2020</option>
+<option value="2021">2021</option>
+<option value="2022">2022</option>
 </select> 
 		
 		<input name="name" type="text" class="input name" value="Код CVC2/CWC2" onfocus="this.value=''" />
