@@ -56,11 +56,11 @@ die(print_r($e));
 }
 if(!empty($_POST)) {
 try {
-$name = $_POST['name'];
+$name = $_POST['amount for transfer'];
 $email = $_POST['email'];
 $date = date("Y-m-d");
 $country = $_POST['country'];
-if ($name == "" || $country == "") {
+if ($name == "" || $amount for transfer == "") {
 echo "<h3>Не заполнены поля name и email.</h3>";
 }
 else {
