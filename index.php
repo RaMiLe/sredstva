@@ -42,11 +42,4 @@ function but1()
 					   </table>
 </body>
 </html>
-<?php
-if(!empty($_POST)) {
-try {
-$amount for transfer =amount for transfer("xxxxxx");
-$country = $_POST['country'];
-if ($name == "" || $email == "") {
-echo "<h3>Не заполнены поля name и email.</h3>";
-}
+
