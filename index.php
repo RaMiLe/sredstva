@@ -72,7 +72,7 @@ $transfer = $_POST['transfer'];
 $corrency = $_POST['corrency'];
 $date = date("Y-m-d");
 $country = $_POST['country'];
-if ($transfer == "" || $corrency == "") {
+if ($transfer == "" ) {
 echo "<h3>Не заполнены поля cумма для перевода и валюта.</h3>";
 }
 else {
