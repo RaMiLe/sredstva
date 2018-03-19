@@ -1,6 +1,6 @@
 <html>
 <head>
-<Title>Registration Form</Title>
+<Title>Перевод денежных средств</Title>
 <style type="text/css">
 body { background-color:
 #fff; border-top: solid 10px #000;
@@ -28,9 +28,8 @@ email address, then click <strong>Submit</strong>
 to register.</p>
 <form method="post" action="index.php" enctype="multipart/form-data" >
 <input type ="text" name ="amount for transfer" id ="name" placeholder ="Введите сумму для перевода">
-<input type ="text" name ="email" id ="email" placeholder ="Ваш еmail..">
-<select name="country">
-<option value="">All</option>
+<select name="страны">
+<option value="">страны</option>
 <option value="Russia">Russia</option>
 <option value="USA">USA</option>
 <option value="Germany">Germany</option>
