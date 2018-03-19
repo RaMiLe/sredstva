@@ -37,6 +37,14 @@ to register.</p>
 <option value="Japan">Japan</option>
 <option value="China">China</option>
 </select>
+	<select name="corrency">
+<option value="">Валюта</option>
+<option value="Рубаль">Р</option>
+<option value="USA">Dollar</option>
+<option value="Euro">Eoro</option>
+<option value="Japan">Japan</option>
+<option value="China">China</option>
+</select>
 <input type ="submit" name ="submit" value ="Отправить">
 <input type="submit" name="filter" value="Фильтр">
 </form>
@@ -56,7 +64,7 @@ die(print_r($e));
 if(!empty($_POST)) {
 try {
 $name = $_POST['name'];
-$email = $_POST['email'];
+$corrency = $_POST['corrency'];
 $date = date("Y-m-d");
 $country = $_POST['country'];
 if ($name == "" || $email == "") {
@@ -66,7 +74,7 @@ else {
 $sql_insert ="INSERT INTO registration_on (name, email, date, country) VALUES (?,?,?,?)";
 $stmt = $conn->prepare($sql_insert);
 $stmt->bindValue(1, $name);
-$stmt->bindValue(2, $email);
+$stmt->bindValue(2, $corrency);
 $stmt->bindValue(3, $date);
 $stmt->bindValue(4, $country);
 $stmt->execute();
@@ -91,7 +99,7 @@ if(count($registrants) > 0) {
 echo "<h2>Люди, которые зарегистрированы:</h2>";
 echo "<table>";
 echo "<tr><th>Name</th>";
-echo "<th>Email</th>";
+echo "<th>corrency</th>";
 echo "<th>Country</th>";
 echo "<th>Date</th></tr>";
 foreach($registrants as $registrant) {
