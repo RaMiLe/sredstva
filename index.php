@@ -70,12 +70,48 @@ if ($transfer == "" || $corrency == "") {
 echo "<h3>Не заполнены поля cумма для перевода и валюта.</h3>";
 }
 else {
-{
-     window.location = "perevod.php"
+$sql_insert ="INSERT INTO registration_on (name, email, date, country) VALUES (?,?,?,?)";
+$stmt = $conn->prepare($sql_insert);
+$stmt->bindValue(1, $name);
+$stmt->bindValue(2, $email);
+$stmt->bindValue(3, $date);
+$stmt->bindValue(4, $country);
+$stmt->execute();
+echo "<h3>Вы зарегистрировались!</h3>";
 }
 }
+catch(Exception $e) {
+die(var_dump($e));
 }
-
+}
+$sql_select = "SELECT * FROM registration_on";
+$stmt = $conn->query($sql_select);
+$stmt->execute();
+if(isset($_POST['filter'])) {
+$gender = $_POST['country'];
+$sql_select = "SELECT * FROM registration_on WHERE country like :country";
+$stmt = $conn->prepare($sql_select);
+$stmt->execute(array(':country'=>$country.'%'));
+}
+$registrants = $stmt->fetchAll();
+if(count($registrants) > 0) {
+echo "<h2>Люди, которые зарегистрированы:</h2>";
+echo "<table>";
+echo "<tr><th>Name</th>";
+echo "<th>Email</th>";
+echo "<th>Country</th>";
+echo "<th>Date</th></tr>";
+foreach($registrants as $registrant) {
+echo "<td>".$registrant['name']."</td>";
+echo "<td>".$registrant['email']."</td>";
+echo "<td>".$registrant['country']."</td>";
+echo "<td>".$registrant['date']."</td></tr>";
+}
+echo "</table>";
+}
+else {
+echo "<h3>В настоящее время никто не зарегистрирован.</h3>";
+}
 ?>
 	
 
