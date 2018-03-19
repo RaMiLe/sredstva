@@ -6,7 +6,7 @@ try {
 $sql = "CREATE TABLE registration_on(
 id INT NOT NULL IDENTITY(1,1),
 PRIMARY KEY(id),
-name VARCHAR(30),
+transfer VARCHAR(30),
 corrency VARCHAR(30),
 country VARCHAR(30),
 date DATE)";
