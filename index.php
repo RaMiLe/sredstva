@@ -42,6 +42,12 @@ function but1()
 					   </table>
 </body>
 </html>
+<?php
+    
+	
+    if (isset($_POST['submit'])){
+		if(empty($_POST['amount for transfer']))  {
+			echo '<br><font color="red"><img border="0" src="error.gif" align="middle" alt="Введите логин!"> Введите логин! </font>';
 
 
 
