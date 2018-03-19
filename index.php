@@ -44,7 +44,7 @@ to register.</p>
 <option value="Japan">Japan</option>
 <option value="China">China</option>
 </select>
- <input type="button" value="Далее" name="buttonreg" onClick="but1()" />
+<input type ="submit" name ="submit" value ="Отправить">
 		       
 	<script>
 function but1()
