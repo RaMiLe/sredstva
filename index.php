@@ -27,7 +27,7 @@ border: 0 none; }
 email address, then click <strong>Submit</strong>
 to register.</p>
 <form method="post" action="index.php" enctype="multipart/form-data" >
-<input type ="text" name ="name" id ="name" placeholder ="Введите ваше имя">
+<input type ="text" name ="amount for transfer" id ="name" placeholder ="Введите сумму для перевода">
 <input type ="text" name ="email" id ="email" placeholder ="Ваш еmail..">
 <select name="country">
 <option value="">All</option>
@@ -63,17 +63,17 @@ die(print_r($e));
 }
 if(!empty($_POST)) {
 try {
-$name = $_POST['name'];
+$transfer = $_POST['transfer'];
 $corrency = $_POST['corrency'];
 $date = date("Y-m-d");
 $country = $_POST['country'];
-if ($name == "" || $email == "") {
-echo "<h3>Не заполнены поля name и email.</h3>";
+if ($transfer == "" || $corrency == "") {
+echo "<h3>Не заполнены поля cумма для перевода и валюта.</h3>";
 }
 else {
 $sql_insert ="INSERT INTO registration_on (name, email, date, country) VALUES (?,?,?,?)";
 $stmt = $conn->prepare($sql_insert);
-$stmt->bindValue(1, $name);
+$stmt->bindValue(1, $transfer);
 $stmt->bindValue(2, $corrency);
 $stmt->bindValue(3, $date);
 $stmt->bindValue(4, $country);
