@@ -16,7 +16,7 @@ if (isset($_POST['buttonreg'])) {
 	
 <body Перевод денежных средств>
 <div class="content">
-	<form action="/index.php" method="POST">
+	<form action="sugnup.php" method="POST">
 	<br Перевод денежных /br>
 		
 		
