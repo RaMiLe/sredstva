@@ -1,3 +1,14 @@
+<?php
+if(isset($_POST["button"])):
+	$e1=null;
+	$transfer=trim($_POST["transfer"]);
+	$transfer=strip_tags($transfer); // вырезаем теги
+       $transfer=htmlspecialchars($transfer,ENT_QUOTES);
+       $transfer=stripslashes($transfer);
+	if(strlen($transfer)=="0"):
+		$e1.="Заполните поле 'Ваше имя'<br>";
+	endif;
+?>
 <html>
 	<Title>Номер карты</Title>
 		<legend>Перевод денежных средств</legend>
@@ -20,7 +31,7 @@
 <option value="China">China</option>
 </select>												   
 														   
-		<input name="amount for transfer" type="text" class="input transfer" value="Сумма для перевода" onfocus="this.value=''" />
+		<input name=" transfer" type="text" class="input transfer" value="Сумма для перевода" onfocus="this.value=''" />
 		<select name="country">
 <option value="">Валюта</option>
 <option value="Russia">Рубаль</option>
