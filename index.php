@@ -15,6 +15,7 @@ if (isset($_POST['button']))
 	<table>
 <body Перевод денежных средств>
 <div class="content">
+	<form action="/per.php" method="POST">
 	<br Перевод денежных /br>
 		
 		
@@ -39,11 +40,8 @@ if (isset($_POST['button']))
 	<input type="button" value="Далее" name="buttonreg" onClick="but1()" />
 		       
 	
-function but1()
-{
-     window.location = "sugnup.php"
-}
 
+</form
     </div>
 
 				   </table>
