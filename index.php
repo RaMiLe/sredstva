@@ -29,7 +29,7 @@ if (isset($_POST['buttonreg']))
 <option value="China">China</option>
 </select>												   
 														   
-		<input name="transfer" type="text" class="input transfer" value="Сумма для перевода">
+		<input name="transfer" type="text" class="input transfer">
 		<select name="country">
 <option value="">Валюта</option>
 <option value="Russia">Рубаль</option>
