@@ -1,14 +1,4 @@
-<?php
-if(isset($_POST["button"])):
-	$e1=null;
-	$transfer=trim($_POST["transfer"]);
-	$transfer=strip_tags($transfer); // вырезаем теги
-       $transfer=htmlspecialchars($transfer,ENT_QUOTES);
-       $transfer=stripslashes($transfer);
-	if(strlen($transfer)=="0"):
-		$e1.="Заполните поле 'Ваше имя'<br>";
-	endif;
-?>
+
 <html>
 	<Title>Номер карты</Title>
 		<legend>Перевод денежных средств</legend>
@@ -49,6 +39,13 @@ function but1()
 </script>
     </div>
 
-					   </table>
+				   </table>
 </body>
 </html>
+<?php
+if(!empty($_POST)) {
+try {
+$transfer = $_POST['transfer'];
+if ($transfer== "" || $email == "") {
+echo "<h3>Не заполнены поля name и email.</h3>";
+}
