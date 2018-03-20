@@ -1,4 +1,11 @@
 
+<?php
+if (isset($_POST['button']))
+	$transfer=$_POST['transfer'];
+	if(empty($transfer)) {
+		$err[]='Поле не заполнено';
+	}
+?>
 <html>
 	<Title>Номер карты</Title>
 		<legend>Перевод денежных средств</legend>
