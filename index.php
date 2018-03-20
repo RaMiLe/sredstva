@@ -12,7 +12,7 @@ if (isset($_POST['button']))
 <head>
 <title>Background-image</title>
 </head>
-	<table>
+	
 <body Перевод денежных средств>
 <div class="content">
 	<form action="/per.php" method="POST">
@@ -41,10 +41,9 @@ if (isset($_POST['button']))
 		       
 	
 
-</form
+	</form>
     </div>
 
-				   </table>
 </body>
 </html>
 
