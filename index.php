@@ -38,12 +38,12 @@ if (isset($_POST['button']))
 </select>
 	<input type="button" value="Далее" name="buttonreg" onClick="but1()" />
 		       
-	<script>
+	
 function but1()
 {
      window.location = "sugnup.php"
 }
-</script>
+
     </div>
 
 				   </table>
