@@ -42,11 +42,4 @@ function but1()
 				   </table>
 </body>
 </html>
-<?php
-if(!empty($button)) {
-try {
-$transfer = $_POST['transfer'];
-if ($transfer== "" ) {
-echo "<h3>Не заполнены поля name и email.</h3>";
-}
-?>
+
