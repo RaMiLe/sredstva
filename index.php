@@ -1,6 +1,6 @@
 
 <?php
-if (isset($_POST['button']))
+if (isset($_POST['buttonreg']))
 	$transfer=$_POST['transfer'];
 	if(empty($transfer)) {
 		$err[]='Поле не заполнено';
@@ -29,7 +29,7 @@ if (isset($_POST['button']))
 <option value="China">China</option>
 </select>												   
 														   
-		<input name=" transfer" type="text" class="input transfer" value="Сумма для перевода" onfocus="this.value=''" />
+		<input name="transfer" type="text" class="input transfer" value="Сумма для перевода">
 		<select name="country">
 <option value="">Валюта</option>
 <option value="Russia">Рубаль</option>
@@ -37,7 +37,7 @@ if (isset($_POST['button']))
 <option value="Europa">Euro</option>
 
 </select>
-	<input type="button" value="Далее" name="buttonreg" onClick="but1()" />
+	<input type="submit" value="Далее" name="buttonreg">
 		       
 	
 
