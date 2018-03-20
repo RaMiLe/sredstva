@@ -3,7 +3,7 @@
 if (isset($_POST['buttonreg']))
 	$transfer=$_POST['transfer'];
 	if(empty($transfer)) {
-		$err[]='Поле не заполнено';
+		echo '<div>'Поле не заполнено!'</div>';
 	}
 ?>
 <html>
