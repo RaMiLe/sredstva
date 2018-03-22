@@ -1,8 +1,17 @@
 
-<form method="POST" action="https://merchant.webmoney.ru/lmi/payment.asp" target="blank">
-    <input name="LMI_PAYMENT_AMOUNT" size="5" value="10" style=" border: 1px solid"> WMZ
-    <input type="hidden" name="LMI_PAYMENT_DESC" value="Пополнение счета <? echo $plyrname; ?>">
-<input type="hidden" name="LMI_PAYEE_PURSE" value="<? echo $u_wmz=Z149398739935; ?>">
-<input type="hidden" name="user" value="<? echo $plyrname; ?>">
-<input type=submit value="Оплатить">
+ <?
+if($curret=file_get_contents('money')){$curret=(integer)$curret;}else{$curret=0;}
+
+if(isset($_POST['money']) and (integer)$_POST['money'])
+{
+    if($file=fopen('money','w'))
+    {
+        fwrite($file,$curret+(integer)$_POST['money']);
+        fclose($file);
+    }
+}
+?>
+<form action="" method="post">
+    <input type="text" name="money" /> <input type="submit" value="добавить" />
 </form>
+<?if($curret){?><div>Наприплюсовано: <?echo $curret;?></div><?}?> 
