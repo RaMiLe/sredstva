@@ -1,27 +1,13 @@
-<html>
-	<Title>Номер карты</Title>
-	<legend>Номер карты получателя</legend>
-	
-<head>
-<title>Background-image</title>
-</head>
-	<table>
-<body background-size="https://ic.pics.livejournal.com/irek_murtazin/10510480/1151738/1151738_600.jpg ">
-	<div class="content">
-		
-		<input name="surname" type="text" class="input surname" value="Номер карты" onfocus="this.value=''" />
-		
-
-															</select>
-		       <input type="button" value="Перевести деньги" name="buttonreg" onClick="but1()" />
-		       
-	<script>
-function but1()
-{
-     window.location = "per.php"
+<?
+$c=$_REQUEST['code'];
+if(!$c) die('Не введен код!');
+$a=0;
+//коннект к бд
+$chk=mysql_query("SELECT * FROM codes WHERE (code='".$c."')",$db);
+if($fd=mysql_fetch_array($chk,MYSQL_NUM)){
+  if( ($c==$fd[0]) && ($fd[1]>0) ) $a=$fd[1];
 }
-</script>		
-    </div>
-					   </table>
-</body>
-</html>
+if(!$a) die('Неверный код!');
+//тут зачисление средств
+echo 'Зачислено '.$a.' единиц';
+?>
