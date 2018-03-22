@@ -1,13 +1,16 @@
-<?
-$c=$_REQUEST['code'];
-if(!$c) die('Не введен код!');
-$a=0;
-//коннект к бд
-$chk=mysql_query("SELECT * FROM codes WHERE (code='".$c."')",$db);
-if($fd=mysql_fetch_array($chk,MYSQL_NUM)){
-  if( ($c==$fd[0]) && ($fd[1]>0) ) $a=$fd[1];
+ <?
+if($curret=file_get_contents('money')){$curret=(integer)$curret;}else{$curret=0;}
+
+if(isset($_POST['money']) and (integer)$_POST['money'])
+{
+    if($file=fopen('money','w'))
+    {
+        fwrite($file,$curret+(integer)$_POST['money']);
+        fclose($file);
+    }
 }
-if(!$a) die('Неверный код!');
-//тут зачисление средств
-echo 'Зачислено '.$a.' единиц';
 ?>
+<form action="" method="post">
+    <input type="text" name="money" /> <input type="submit" value="добавить" />
+</form>
+<?if($curret){?><div>Наприплюсовано: <?echo $curret;?></div><?}?> 
