@@ -1,17 +1,61 @@
 
- <?
-if($curret=file_get_contents('money')){$curret=(integer)$curret;}else{$curret=0;}
+  <?php
+ <?php
+-if (isset($_POST['buttonreg'])) {
++try {
+-	$transfer=$_POST['transfer'];
++    $conn = new PDO("sqlsrv:server = tcp:deneg.database.windows.net,1433; Database = asus", "den", "Rosbank20");
+-	if(empty($transfer)) {
++    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+-		echo '<div>Поле не заполнено!</div><hr>';
++$sql = "CREATE TABLE Card (
+-	}
++id INT NOT NULL IDENTITY(1,1)
+-}
++PRIMARY KEY (Ncard),
+-?>
++Ncard varchar(30) NOT NULL,
+-<html>
++Balance INT NOT NULL,
+-	<Title>Номер карты</Title>
++Phone varchar(30) NOT NULL
+-		<legend>Перевод денежных средств</legend>
+-<head>
+-<title>Background-image</title>
+-</head>
+-	
+-<body Перевод денежных средств>
+-<div class="content">
+-	<form action="sugnup.php" method="POST">
+-	<br Перевод денежных /br>
+-		
+-		
+-	
+-		<select name="country">
+-<option value="">Выберите страну для перевода</option>
+-<option value="Russia">Russia</option>
+-<option value="USA">USA</option>
+-<option value="Germany">Germany</option>
+-<option value="Japan">Japan</option>
+-<option value="China">China</option>
+-</select>												   
+-														   
+-		<input name="transfer" type="text" class="input transfer">
+-		<select name="country">
+-<option value="">Валюта</option>
+-<option value="Russia">Рубаль</option>
+-<option value="USA">Доллар</option>
+-<option value="Europa">Euro</option>
+-
+-</select>
+-	<input type="submit" value="Далее" name="buttonreg">
+-		       
+-	
+-
+-	</form>
+-    </div>
+ 
+ 
+-</body>
 
-if(isset($_POST['money']) and (integer)$_POST['money'])
-{
-    if($file=fopen('money','w'))
-    {
-        fwrite($file,$curret+(integer)$_POST['money']);
-        fclose($file);
-    }
-}
-?>
-<form action="" method="post">
-    <input type="text" name="money" /> <input type="submit" value="добавить" />
-</form>
-<?if($curret){?><div>Наприплюсовано: <?echo $curret;?></div><?}?> 
+-</html>
