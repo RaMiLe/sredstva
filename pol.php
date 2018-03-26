@@ -13,4 +13,4 @@ if(isset($_POST['money']) and (integer)$_POST['money'])
 <form action="" method="post">
     <input type="text" name="money" /> <input type="submit" value="добавить" />
 </form>
-<?if($curret){?><div>Наприплюсовано: <?echo $curret;?></div><?}?> 
+<?if($curret){?><div>Ваш баланс: <?echo $curret;?></div><?}?> 
