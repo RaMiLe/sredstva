@@ -57,6 +57,8 @@ die(print_r($e));
 }
 if(!empty($_POST)) {
 try {
+ $surname = $_POST['surname'];
+ $name = $_POST['name'];
 $name = $_POST['name'];
 $email = $_POST['email'];
 $date = date("Y-m-d");
@@ -65,8 +67,9 @@ if ($name == "" || $email == "") {
 echo "<h3>Не заполнены поля name и email.</h3>";
 }
 else {
-$sql_insert ="INSERT INTO registration_on (name, email, date, country) VALUES (?,?,?,?)";
+$sql_insert ="INSERT INTO registration_on (name, email, date, country) VALUES (?,?,?,?,?)";
 $stmt = $conn->prepare($sql_insert);
+ $stmt->bindValue(1, $surname);
 $stmt->bindValue(1, $name);
 $stmt->bindValue(2, $email);
 $stmt->bindValue(3, $date);
@@ -92,11 +95,13 @@ $registrants = $stmt->fetchAll();
 if(count($registrants) > 0) {
 echo "<h2>Люди, которые зарегистрированы:</h2>";
 echo "<table>";
+ echo "<tr><th>surname</th>";
 echo "<tr><th>Name</th>";
 echo "<th>Email</th>";
 echo "<th>Country</th>";
 echo "<th>Date</th></tr>";
 foreach($registrants as $registrant) {
+ echo "<td>".$registrant['surname']."</td>";
 echo "<td>".$registrant['name']."</td>";
 echo "<td>".$registrant['email']."</td>";
 echo "<td>".$registrant['country']."</td>";
